@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html>
+    <body>
+        <div>
+            <p>
+                <input type="text" id="a1"> + <input type="text" id="a2"> =
+                <input type="text" id="a3" readonly> <input type="button" value="計算" id="a4">
+            </p>
+            <p>
+                <input type="text" id="b1"> - <input type="text" id="b2"> =
+                <input type="text" id="b3" readonly> <input type="button" value="計算" id="b4">
+            </p>
+            <p>
+                <input type="text" id="c1"> x <input type="text" id="c2"> =
+                <input type="text" id="c3" readonly> <input type="button" value="計算" id="c4">
+            </p>
+            <p>
+                <input type="text" id="d1"> ÷ <input type="text" id="d2"> =
+                <input type="text" id="d3" readonly> <input type="button" value="計算" id="d4">
+            </p> 
+        </div>
+    <script>
+    var button1 = document.getElementById("a4");
+    var button2 = document.getElementById("b4");
+    var button3 = document.getElementById("c4");
+    var button4 = document.getElementById("d4");
+    
+    button1.addEventListener("click", function(e) {
+        e.preventDefault();
+        var a1 = document.getElementById("a1").value;
+        var a2 = document.getElementById("a2").value;
+        var answer = parseInt(a1, 10) + parseInt(a2, 10);
+        var a3  = document.getElementById("a3");
+        a3.value = answer;
+    });
+    button2.addEventListener("click", function(e) {
+        e.preventDefault();
+        var b1 = document.getElementById("b1").value;
+        var b2 = document.getElementById("b2").value;
+        var answer = parseInt(b1, 10) - parseInt(b2, 10);
+        var b3  = document.getElementById("b3");
+        b3.value = answer;
+    });
+    button3.addEventListener("click", function(e) {
+        e.preventDefault();
+        var c1 = document.getElementById("c1").value;
+        var c2 = document.getElementById("c2").value;
+        var answer = parseInt(c1, 10) * parseInt(c2, 10);
+        var c3  = document.getElementById("c3");
+        c3.value = answer;
+    });
+    button4.addEventListener("click", function(e) {
+        e.preventDefault();
+        var d1 = document.getElementById("d1").value;
+        var d2 = document.getElementById("d2").value;
+        var answer = parseInt(d1, 10) / parseInt(d2, 10);
+        var d3  = document.getElementById("d3");
+        d3.value = answer;
+    });
+    </script>
+    </body> 
+</html>
